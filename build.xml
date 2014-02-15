@@ -1,0 +1,10 @@
+<project name="NodeJSSocketServer" default="pull" basedir=".">
+    <description>SSH Atempt to pull from GIT</description>
+    <property file="./ant/local.properties" />
+    <property file="./ant/build.properties" />
+
+    <target name="pull">
+        <sshexec host="${server}" username="${user}" keyfile="${ssh}" passphrase="${pass}" command="cd ${folder};git pull;"/>
+    </target>
+    
+</project>
