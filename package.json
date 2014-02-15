@@ -1,0 +1,21 @@
+{
+    "name": "NodeJSSocketServer",
+    "description": "",
+    "version": "0.0.1",
+    "main": "./NodeJSSocketServer.js",
+    "author": {
+        "name": "Cain",
+        "email": "you@email.example"
+    },
+    "keywords": [],
+    "licenses": {
+        "type": "none"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/YOUR_LOGIN/NodeJSSocketServer.git"
+    },
+    "bugs": {
+        "url": "http://github.com/YOUR_LOGIN/NodeJSSocketServer/issues"
+    }
+}
