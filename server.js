@@ -1,11 +1,18 @@
 var net     = require('net');
-var server  = net.createServer(function(connection)                             {
-    console.log('server connected');
-    connection.on('end', function() {
+
+var clients = [];
+
+var server  = net.createServer(function(socket)                                 {
+    console.log('server connected', socket.remoteAddress);
+    socket.on('end', function() {
         console.log('server disconnected');
     });
-    connection.write('hello\r\n');
-    connection.pipe(connection);
+    socket.write('hello\r\n');
+    socket.pipe(socket);
+    socket.end();
+    
+    clients.push(socket);
+    
 });
 
 server.listen(4000, function()                                                  {
